@@ -10,6 +10,10 @@ function App() {
     };
     const parenthesis = params;
     const stack = [];
+    if (parenthesis === "") {
+      setValidation("Not Valid");
+      return;
+    }
 
     for (let i = 0; i < parenthesis.length; i++) {
       if (parenthesisOrder[parenthesis.charAt(i)]) {
